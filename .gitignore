@@ -6,3 +6,4 @@
 stormforwarder*
 knife.rb
 tmp.stormforwarder.*
+.vagrant
