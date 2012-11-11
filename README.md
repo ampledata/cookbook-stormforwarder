@@ -7,9 +7,11 @@ Cookbook for setting up a splunkforwarder as a Splunk Storm forwarder.
 
 Requirements
 ============
-* The [splunkforwarder
-  Cookbook](http://community.opscode.com/cookbooks/splunkforwarder)
-* Linux host on which to run splunkforwarder.
+1. Linux host on which to run splunkforwarder.
+2. The [splunkforwarder Cookbook](http://community.opscode.com/cookbooks/splunkforwarder)
+3. The Splunk Storm Access Token: Login to Splunk Storm and Navigate to [Account Overview](https://www.splunkstorm.com/storm/account/overview) and click **Show Authentication Token.**
+4. The Splunk Storm Project ID: Login to Splunk Storm and Navigate to your project's *<Settings>*, where you'll find your Project ID.
+
 
 
 Attributes
