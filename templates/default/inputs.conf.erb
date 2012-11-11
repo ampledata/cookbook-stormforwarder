@@ -1,0 +1,15 @@
+# Default Input Configuration for the stormforwarder Splunk App.
+# Installed via the stormforwarder Chef Cookbook.
+#
+# Template:: default/inputs.conf.erb
+# Cookbook Name:: stormforwarder
+# Source:: https://github.com/ampledata/cookbook-stormforwarder
+# Author:: Greg Albrecht <mailto:gba@splunk.com>
+# Copyright:: Copyright 2012 Splunk, Inc.
+# License:: Apache License 2.0
+#
+
+
+[default]
+_storm_api_token=<%= node['stormforwarder']['api_token'] %>
+_storm_project_id=<%= node['stormforwarder']['project_id'] %>

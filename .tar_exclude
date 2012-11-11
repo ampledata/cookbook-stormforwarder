@@ -1,0 +1,16 @@
+.git*
+local
+metadata/local.meta
+*.tar
+*.gz
+*.spl
+*.deb
+.vagrant
+.tar_exclude
+*.log
+cover
+cookbooks
+site-cookbooks
+.travis.yml
+knife.rb
+tmp.stormforwarder.*

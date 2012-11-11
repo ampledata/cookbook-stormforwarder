@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+#^syntax detection
+# Libarian configuration file for stormforwarder Cookbook.
+#
+# Source:: https://github.com/ampledata/cookbook-stormforwarder
+# Author:: Greg Albrecht <mailto:gba@splunk.com>
+# Copyright:: Copyright 2012 Splunk, Inc.
+# License:: Apache License 2.0.
+#
+
+
+site 'http://community.opscode.com/api/v1'
+
+
+cookbook 'splunkforwarder',
+  :version => '1.0.0'
