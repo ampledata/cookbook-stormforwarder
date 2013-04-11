@@ -28,10 +28,12 @@ else
     "['stormforwarder']['project_id'] are unset.")
 end
 
-node['stormforwarder']['monitors'].each do |file_or_directory_path|
-  execute "add monitor for #{file_or_directory_path}" do
-    command "/opt/splunkforwarder/bin/splunk add monitor #{file_or_directory_path}"
+node['stormforwarder']['monitors'].each do |config_hash|
+  monitor_params = config_hash.map{|k,v| "-#{k} #{v}"}
 
-    not_if  "/opt/splunkforwarder/bin/splunk list monitor | sed -e 's/^[ \t]*//' | grep '^#{file_or_directory_path}$'"
+  execute "add monitor for #{config_hash['source']}" do
+    command "/opt/splunkforwarder/bin/splunk add monitor #{monitor_params}"
+
+    not_if  "/opt/splunkforwarder/bin/splunk list monitor | sed -e 's/^[ \t]*//' | grep '^#{config_hash['source']}$'"
   end
 end
