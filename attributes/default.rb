@@ -1,0 +1,1 @@
+default['stormforwarder']['monitors'] = []
